@@ -1,5 +1,6 @@
 # facebook_page-page_dataset
 
+This webgraph is a page-page graph of verified Facebook sites. Nodes represent official Facebook pages while the links are mutual likes between sites. Node features are extracted from the site descriptions that the page owners created to summarize the purpose of the site. This graph was collected through the Facebook Graph API in November 2017 and restricted to pages from 4 categories which are defined by Facebook. These categories are: politicians, governmental organizations, television shows and companies. The task related to this dataset is multi-class node classification for the 4 site categories.
 
 This repository provides a pipeline to convert the raw **Facebook Large Page-Page Network dataset** (MUSAE) from the **[UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/527/facebook+large+page+page+network)** into a consolidated, GNN-friendly compressed NumPy matrix (`facebook.npz`) matching the format distributed by GraphMining.ai.
 
@@ -135,6 +136,14 @@ print(data['page_name'][1])     # Original string page names -> U.S. Consulate G
 This dataset is licensed under a **Creative Commons Attribution 4.0 International (CC BY 4.0)** license. If you use this data in academic work, please cite the repository curators:
 
 ```text
-Facebook Large Page-Page Network [Dataset]. (2020). UCI Machine Learning Repository. https://doi.org.
+@misc{rozemberczki2019multiscale,
+      title={Multi-scale Attributed Node Embedding},
+      author={Benedek Rozemberczki and Carl Allen and Rik Sarkar},
+      year={2019},
+      eprint={1909.13021},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
 ```
+**[UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/527/facebook+large+page+page+network)**
 
