@@ -41,7 +41,7 @@ When you unpack the `.npz` file, it exposes five primary components:
 Because this `.npz` file uses the identical array naming convention and dimensions as the GraphMining.ai backend, you can seamlessly integrate it with the PyTorch Geometric (`PyG`) ecosystem in two ways.
 
 ### Option 1: Drop-In Offline Replacement (Bypassing Downloads)
-The `torch_geometric.datasets.FacebookPagePage` loader automatically downloads and looks for an internal `facebook.npz` asset in its raw directory<<!contextual(citationKey="0.1.3", source="""The Facebook Page-Page network dataset ... introduced in the “Multi-scale Attributed""", node=-1)/>>. If you are working in an environment without internet access or wish to use your custom-built file (e.g., containing your specific SVD random state seed), you can drop it directly into the expected cache folder structure:
+The `torch_geometric.datasets.FacebookPagePage` loader automatically downloads and looks for an internal `facebook.npz` asset in its raw directory. If you are working in an environment without internet access or wish to use your custom-built file (e.g., containing your specific SVD random state seed), you can drop it directly into the expected cache folder structure:
 
 ```python
 import os
@@ -101,7 +101,7 @@ print(f"Node 50 text metadata: {pyg_graph.page_name[50]}")
 
 ## Transformation Pipeline
 The included notebook automates the following pipeline steps:
-1. **Source Extraction:** Downloads the data bundle from the UCI Repository (Dataset ID: `527`).
+1. **Source:** Uses the downloaded and extracted files from facebook_large folder (Source :  **[UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/527/facebook+large+page+page+network)** Dataset ID: `527`).
 2. **Feature Compression:** Takes the variable-length dictionary of 4,714 unique token IDs, constructs a sparse bag-of-words binary matrix, and applies **TruncatedSVD/PCA** down to a uniform **128-dimensional dense feature matrix**.
 3. **Graph Directedness:** Duplicates and reverses the 171,002 undirected edge coordinates to format a dual-directional `edge_index` (`342,004` entries) compliant with deep learning frameworks.
 4. **Textual Preservation:** Maps and aligns raw string `page_name` arrays into the archive matrix using serialized object pickling.
