@@ -133,7 +133,9 @@ print(data['page_name'][1])     # Original string page names -> U.S. Consulate G
 ```
 
 ##  Citations & License
-This dataset is licensed under a **Creative Commons Attribution 4.0 International (CC BY 4.0)** license. If you use this data in academic work, please cite the repository curators:
+This dataset is licensed under a **Creative Commons Attribution 4.0 International (CC BY 4.0)** license. 
+This repo is simply to provide sharing and some additional tools for the data pre processing for research/academic/educational use. We acknowledge the original authors and thank them for making the data public and available.
+If you use this data in academic work, please cite the repository curators:
 
 ```text
 @misc{rozemberczki2019multiscale,
